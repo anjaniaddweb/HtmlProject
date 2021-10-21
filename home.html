@@ -21,8 +21,31 @@
     height: 500px; 
   }
 
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #e6a7a3;
+    color: #1e25eb;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
 </style>
 </head>
+
 <body>
 
   <header>
@@ -43,7 +66,10 @@
     <img src="img/anjani.PNG" alt="anjani" height="500px" width="450px">
         
     <article>
-      <h1>Hobbies</h1>
+      <div class="tooltip"><b>Home</b>
+        <span class="tooltiptext">Home</span>
+      </div>
+
       <p>I love to cook.</p>
       <p>I love to dance.</p>
       <p>I love to play games.</p>
